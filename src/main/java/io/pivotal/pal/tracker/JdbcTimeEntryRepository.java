@@ -15,8 +15,9 @@ import static java.sql.Statement.RETURN_GENERATED_KEYS;
 public class JdbcTimeEntryRepository implements TimeEntryRepository {
 
     private final JdbcTemplate jdbcTemplate;
-    public JdbcTimeEntryRepository(DataSource ds) {
-        this.jdbcTemplate = new JdbcTemplate(ds);
+
+    public JdbcTimeEntryRepository(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     @Override
